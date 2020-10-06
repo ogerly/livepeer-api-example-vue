@@ -1,0 +1,91 @@
+{
+  "name": "livepeer-demo",
+  "description": "livepeer api demo + hasura + auth0 for busFaktor()",
+  "author": "ogerly <ogerly@tutanota.com>",
+  "keywords": [
+    "livepeer",
+    "hasura",
+    "graphql",
+    "apollo",
+    "videostream",
+    "livestream",
+    "api"
+  ],
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm run build",
+    "start": "node web-server.js",
+    "serve": "vue-cli-service serve --port 3000",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@auth0/auth0-spa-js": "^1.2.3",
+    "@fortawesome/fontawesome-svg-core": "^1.2.31",
+    "git": "^5.15.0",
+    "@fortawesome/vue-fontawesome": "^0.1.7",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link-http": "^1.5.17",
+    "axios": "^0.20.0",
+    "express": "^4.17.1",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.11.0",
+    "highlight.js": "^9.15.10",
+    "http": "0.0.1-security",
+    "morgan": "^1.9.1",
+    "request": "^2.88.2",
+    "serve-static": "^1.14.1",
+    "videojs-contrib-hls": "5.14.1",
+    "videojs-contrib-hls.js": "3.2.0",
+    "videojs-flash": "2.1.0",
+    "vue": "^2.6.10",
+    "vue-apollo": "^3.0.4",
+    "vue-axios": "^2.1.5",
+    "vue-router": "^3.4.5",
+    "vue-video-player": "4.0.6"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-plugin-eslint": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "@vue/eslint-config-prettier": "^3.0.5",
+    "babel-eslint": "^10.0.3",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^7.3.1",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "prettier": {
+    "singleQuote": false,
+    "semi": true
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "browser": true
+    },
+    "plugins": [
+      "vue"
+    ],
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "error",
+            "warn"
+          ]
+        }
+      ]
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  }
+}
