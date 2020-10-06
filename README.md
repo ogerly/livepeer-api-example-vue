@@ -103,5 +103,4 @@ Heroku bietet den Speicherplatz. Richte dir einen free account bei heroku ein.
 >https://devcenter.heroku.com/articles/git
  
 
-
-![livepeer-demo](https://user-images.githubusercontent.com/1324583/95120081-4798bb00-074d-11eb-9a29-e65a7aadbad2.png)
+ 
