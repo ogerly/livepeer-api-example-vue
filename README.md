@@ -1,12 +1,15 @@
 ## livepeer_api-vue-example
 
-mit diesem example wird die livepeer.com api in einer vue anwendung umgesetzt.
+Mit diesem Beispiel wird die livepeer.com API in einer VUE Anwendung umgesetzt und das Livestreamings für angemeldete User angeboten.
+GraphQL Datenbank über Hasura Cloud. 
+Userregistrierung und Verwaltung über auth0.com 
+Zuletzt schieben wir das alles auf einen kostenlosen Account von Heroku.com
 
 #### technik
    - VUE, 
    - GraphQL, 
    - Apollo, 
-   - AXIOS
+   - axios
 
 #### API
   - livepeer API - https://livepeer.com/docs
@@ -15,16 +18,14 @@ mit diesem example wird die livepeer.com api in einer vue anwendung umgesetzt.
  
   - Datenbank - hasura.io, 
   - Autentifizierung - auth0.com 
-   - Speicher - heroku.com, 
+  - Speicher - heroku.com, 
 
 
 ![overview](https://user-images.githubusercontent.com/1324583/94922603-d04bf880-04ba-11eb-9580-249e5dae63ae.png)
 
-### aufgabe
-Im Netzwerk soll es zukünftig eine Möglichkeit geben für User Live zu streamen.  
- 
+
 ### problem
-Serverkosten für Livestreams sind enorm hoch für z.B. Startups und Serviceanbieter in diesem Bereich. Livepeer.org / livepeer.com bietet eine lösung für dieses Problem. 
+Serverkosten für Livestreams sind enorm hoch für z.B. Start-ups und Serviceanbieter in diesem Bereich. Livepeer.org / livepeer.com bietet eine Lösung für dieses Problem.
 >   WHITEPAPER von livepeer : https://github.com/livepeer/wiki/blob/master/WHITEPAPER.md
 
 
@@ -49,11 +50,11 @@ folgende Variablen musst du anpassen.
 ## Clouds
   
 #### hasura
-Hasura bietet eine Cloudbasierte GraphQL Datenbank. Richte dir einen free Account (1 GB) ein und passe die **.env** an. 
+Hasura bietet eine Cloudbasierte GraphQL Datenbank. Richte dir einen kostenlosen Account (1 GB) ein und passe die **.env** an.
 
 	VUE_APP_HASURA_APP_V1_GRAPHQL = https://xxxxxxxxxxx.hasura.app/v1/graphql 
 	
-lege eine Tabelle **streams** an mit folgenden Spalten. 
+Lege eine Tabelle **streams** an mit folgenden Spalten.
   
 
 	id           - uuid, primary key, unique, default: gen_random_uuid()
@@ -65,22 +66,22 @@ lege eine Tabelle **streams** an mit folgenden Spalten.
 
 
 ##### auth0 
-auth0 bietet für Testzwecke ein begrenzten free account. Richte dir bitte da  ein Konto ein und passe die **.env** datei an.
+auth0 bietet für Testzwecke ein begrenzten kostenlosen Account. Richte dir bitte da ein Konto ein und passe die **.env** Datei an.
         
 	VUE_APP_AUTH0_DOMAIN=xxxxx.us.auth0.com
 	VUE_APP_AUTH0_CLIENTID=SECRET
 	
 	
 ##### livepeer
-Ziel des Livepeer-Projekts ist die Bereitstellung eines Netzwerkprotokolls für Live-Video-Streaming, das vollständig dezentralisiert und hoch skalierbar ist, Krypto-Token als Anreiz bietet und zu einer Lösung führt, die als Live-Medienschicht im dezentralisierten Entwicklungsstapel (web3) dienen kann. Darüber hinaus soll Livepeer eine wirtschaftlich effiziente Alternative zu zentralisierten Broadcast-Lösungen für jeden bestehenden Broadcaster darstellen. In diesem Dokument beschreiben wir das Livepeer-Protokoll - ein auf einem delegierten Einsatz basierendes Protokoll, um Teilnehmer in einem Live-Video-Übertragungsnetzwerk auf eine spieltheoretisch sichere Weise zu motivieren. Wir stellen Lösungen für die skalierbare Verifikation von dezentralisierter Arbeit vor, sowie die Verhinderung von nutzloser Arbeit in dem Versuch, die Spielmarkenzuweisungen in einem inflationären System zu spielen.
+Ziel des Livepeer-Projekts ist die Bereitstellung eines Netzwerkprotokolls für Live-Video-Streaming, das vollständig dezentralisiert und hoch skalierbar ist, Krypto-Token als Anreiz bietet und zu einer Lösung führt, die als Live-Medienschicht im dezentralisierten Entwicklungsstapel (web3) dienen kann. Darüber hinaus soll Livepeer eine wirtschaftlich effiziente Alternative zu zentralisierten Broadcast-Lösungen für jeden bestehenden Broadcaster darstellen. 
 
->  Als Dienstleistungsgeber richtet man sich ein Account bei Livepeer.com an. Legen Sie einen API-Key an und tragen sie diesen in der der **.env** datei ein. 
+>  Als Dienstleistungsgeber richtet man sich ein Account bei Livepeer.com an. Legen Sie einen API-Key an und tragen sie diesen in der **.env** Datei ein.
 
 	VUE_APP_LIVEPEER_API_KEY = SECRET
 	VUE_APP_LIVEPEER_USERID= SECRET 
 
 
-2. die Anwendung sollte jetzt laufen 
+2. Die Anwendung sollte jetzt laufen
 
 Führe ein install aus. 
 
@@ -93,11 +94,11 @@ Führe ein install aus.
 	$ npm run lint --fix
 	
 	
-für alle die bis hier her gekommen sind 
+Für alle die bis hier hergekommen sind
 
 
 #### heroku 
-Heroku bietet den Speicherplatz. Richte dir einen free account bei heroku ein. 
+Heroku bietet den Speicherplatz. Richte dir einen kostenlosen Account bei heroku.com ein.
 
 >Deploying with Git
 >https://devcenter.heroku.com/articles/git
